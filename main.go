@@ -11,7 +11,7 @@ type Hello struct{}
 // let that type implement the ServeHTTP method (defined in interface
 // http.Handler)
 func (h Hello) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "Hello!")
+	fmt.Fprint(w, "Hello111!")
 }
 
 func main() {
