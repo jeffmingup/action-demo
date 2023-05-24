@@ -2,13 +2,8 @@ name: ci
 
 on:
   push:
-    branches:
-      - "**"
     tags:
       - "v*"
-  pull_request:
-    branches:
-      - "master"
 
 jobs:
   docker:
@@ -26,7 +21,7 @@ jobs:
           # generate Docker tags based on the following events/attributes
           tags: |
             type=semver,pattern={{raw}}
-            
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
 
